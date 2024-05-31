@@ -12,6 +12,9 @@
         <parameter name="phone" value="987654321"></parameter>
         <parameter name="streetAddress" value="109, Kazi Street, Mandvi"></parameter>
         <parameter name="cityName" value="Mumbai"></parameter>
+        <parameter name="countryName" value="India"></parameter>
+        <parameter name="provinceName" value="Maharashtra"></parameter>
+        <parameter name="postalCode" value="400001"></parameter>
         <classes>
             <class name="EvershopTestNg">
                 <methods>

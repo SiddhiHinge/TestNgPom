@@ -50,11 +50,11 @@ public class EvershopTestNg {
         .clickAddToCart().viewCartPopup().clickCheckout();
     }
 
-    @Parameters({"fullName","phone","streetAddress","cityName"})
+    @Parameters({"fullName","phone","streetAddress","cityName","countryName","provinceName","postalCode"})
     @Test
-    public void addAddressInCheckout(String fullName, String phone, String streetAddress,String cityName) throws InterruptedException {
+    public void addAddressInCheckout(String fullName, String phone, String streetAddress,String cityName,String countryName,String provinceName,String postalCode) throws InterruptedException {
         CheckoutPom checkoutPom = new CheckoutPom(webDriver,wait);
-        checkoutPom.fillFullName(fullName).fillTelephone(phone).fillAddress(streetAddress).fillCity(cityName);
+        checkoutPom.fillFullName(fullName).fillTelephone(phone).fillAddress(streetAddress).fillCity(cityName).chooseCountry(countryName).chooseProvince(provinceName).fillPostalCode(postalCode).clickPayment();
     }
 
     @Parameters({"button"})
@@ -70,8 +70,8 @@ public class EvershopTestNg {
         accountPom.gotoAccount().logout();
     }
 
-    @AfterClass
+    /*@AfterClass
     public void closeSetup() {
         webDriver.quit();
-    }
+    }*/
 }
